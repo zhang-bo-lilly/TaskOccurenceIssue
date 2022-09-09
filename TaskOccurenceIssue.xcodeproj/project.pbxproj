@@ -11,6 +11,12 @@
 		513B62E128CACFDA00536A5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513B62E028CACFDA00536A5E /* ContentView.swift */; };
 		513B62E328CACFDE00536A5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513B62E228CACFDE00536A5E /* Assets.xcassets */; };
 		513B62E628CACFDE00536A5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513B62E528CACFDE00536A5E /* Preview Assets.xcassets */; };
+		513B62EE28CAD01600536A5E /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = 513B62ED28CAD01600536A5E /* CareKit */; };
+		513B62F028CAD01600536A5E /* CareKitFHIR in Frameworks */ = {isa = PBXBuildFile; productRef = 513B62EF28CAD01600536A5E /* CareKitFHIR */; };
+		513B62F228CAD01600536A5E /* CareKitStore in Frameworks */ = {isa = PBXBuildFile; productRef = 513B62F128CAD01600536A5E /* CareKitStore */; };
+		513B62F428CAD01600536A5E /* CareKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 513B62F328CAD01600536A5E /* CareKitUI */; };
+		513B62F628CAD08900536A5E /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513B62F528CAD08900536A5E /* ContentViewController.swift */; };
+		513B62F928CAD31100536A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513B62F828CAD31100536A5E /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,8 @@
 		513B62E028CACFDA00536A5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		513B62E228CACFDE00536A5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		513B62E528CACFDE00536A5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		513B62F528CAD08900536A5E /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		513B62F828CAD31100536A5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +34,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513B62EE28CAD01600536A5E /* CareKit in Frameworks */,
+				513B62F028CAD01600536A5E /* CareKitFHIR in Frameworks */,
+				513B62F428CAD01600536A5E /* CareKitUI in Frameworks */,
+				513B62F228CAD01600536A5E /* CareKitStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				513B62DE28CACFDA00536A5E /* TaskOccurenceIssueApp.swift */,
+				513B62F828CAD31100536A5E /* AppDelegate.swift */,
 				513B62E028CACFDA00536A5E /* ContentView.swift */,
+				513B62F528CAD08900536A5E /* ContentViewController.swift */,
 				513B62E228CACFDE00536A5E /* Assets.xcassets */,
 				513B62E428CACFDE00536A5E /* Preview Content */,
 			);
@@ -83,6 +97,12 @@
 			dependencies = (
 			);
 			name = TaskOccurenceIssue;
+			packageProductDependencies = (
+				513B62ED28CAD01600536A5E /* CareKit */,
+				513B62EF28CAD01600536A5E /* CareKitFHIR */,
+				513B62F128CAD01600536A5E /* CareKitStore */,
+				513B62F328CAD01600536A5E /* CareKitUI */,
+			);
 			productName = TaskOccurenceIssue;
 			productReference = 513B62DB28CACFDA00536A5E /* TaskOccurenceIssue.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 513B62D228CACFDA00536A5E;
+			packageReferences = (
+				513B62EC28CAD01600536A5E /* XCRemoteSwiftPackageReference "CareKit" */,
+			);
 			productRefGroup = 513B62DC28CACFDA00536A5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513B62F928CAD31100536A5E /* AppDelegate.swift in Sources */,
 				513B62E128CACFDA00536A5E /* ContentView.swift in Sources */,
+				513B62F628CAD08900536A5E /* ContentViewController.swift in Sources */,
 				513B62DF28CACFDA00536A5E /* TaskOccurenceIssueApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +364,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		513B62EC28CAD01600536A5E /* XCRemoteSwiftPackageReference "CareKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/carekit-apple/CareKit.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		513B62ED28CAD01600536A5E /* CareKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 513B62EC28CAD01600536A5E /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKit;
+		};
+		513B62EF28CAD01600536A5E /* CareKitFHIR */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 513B62EC28CAD01600536A5E /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKitFHIR;
+		};
+		513B62F128CAD01600536A5E /* CareKitStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 513B62EC28CAD01600536A5E /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKitStore;
+		};
+		513B62F328CAD01600536A5E /* CareKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 513B62EC28CAD01600536A5E /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKitUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 513B62D328CACFDA00536A5E /* Project object */;
 }
