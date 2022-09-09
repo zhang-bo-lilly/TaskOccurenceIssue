@@ -22,7 +22,8 @@ class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
         
         // Seed an all day task
         let taskStartDate = Calendar.current.startOfDay(for: Date())
-        let taskEndDate = Calendar.current.date(byAdding: .day, value: 2, to: taskStartDate)
+        let taskEndDate = Calendar.current.date(byAdding: .day, value: 1, to: taskStartDate)
+        //let taskEndDate = Calendar.current.date(byAdding: DateComponents(day: 1, second: -1), to: taskStartDate)
 
         let taskScheduleElement = OCKScheduleElement(
             start: taskStartDate,
